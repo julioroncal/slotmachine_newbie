@@ -1,0 +1,106 @@
+body {
+    padding: 10px;
+    font-family: sans-serif;
+    background-color: #222;
+    align-items: center;
+}
+
+body {
+    font-family: sans-serif;
+    background-color:black;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
+    background: black;
+}
+
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7cm;
+}
+
+.button {
+    display: flex;
+    width: 100px;
+    height: 50px;
+    background-color: #F00;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center; 
+    cursor: pointer;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px;
+    position: relative;
+    transform: translateZ(0);
+    animation: tremble 2s linear infinite;
+    animation: playButtonPulse 2s infinite;
+    transition: all 1s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.play-button {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    background-color: #FF0000;
+    color: #FFF;
+    font-size: 24px;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transform: translateZ(1);
+    animation: tremble 1s linear infinite;
+    animation: playButtonPulse 2s infinite;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes tremble {
+    0% {
+        transform: translateX(2px);
+    }
+    50% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(2px);
+    }
+}
+
+@keyframes playButtonPulse {
+    0% {
+        background-color: #FF0000;
+    }
+    50% {
+        background-color: #F00;
+    }
+    100% {
+        background-color: #FF0000;
+    }
+}
+
+.rainbow {
+    animation: rainbowFade 1.5s infinite;
+}
+
+.rainbow-text {
+    animation: rainbowText 1.5s steps(4);
